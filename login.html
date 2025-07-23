@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Sign Up - RICH LIFE HEALTH CARE</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .auth-container {
+            max-width: 400px;
+            margin: 80px auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+            padding: 2.5rem 2rem 2rem 2rem;
+            text-align: center;
+        }
+        .auth-container h2 {
+            margin-bottom: 1.5rem;
+        }
+        .auth-toggle {
+            margin-bottom: 2rem;
+        }
+        .auth-toggle button {
+            background: none;
+            border: none;
+            font-weight: 600;
+            color: #3498db;
+            cursor: pointer;
+            margin: 0 0.5rem;
+            font-size: 1rem;
+        }
+        .auth-toggle .active {
+            color: #e74c3c;
+            text-decoration: underline;
+        }
+        .auth-form input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            border: 1px solid #e1e8ed;
+            font-size: 1rem;
+        }
+        .auth-form button[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            background: #e74c3c;
+            color: #fff;
+            font-weight: 700;
+            border: none;
+            font-size: 1.1rem;
+            cursor: pointer;
+            margin-bottom: 1rem;
+        }
+        .auth-form .error {
+            color: #e74c3c;
+            margin-bottom: 1rem;
+        }
+        .back-home {
+            display: block;
+            margin-top: 1.5rem;
+            color: #3498db;
+            text-decoration: none;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.39.7/dist/umd/supabase.min.js"></script>
+</head>
+<body>
+    <div class="auth-container">
+        <h2 id="auth-title">Login</h2>
+        <div class="auth-toggle">
+            <button id="show-login" class="active">Login</button>|
+            <button id="show-signup">Sign Up</button>
+        </div>
+        <form id="auth-form" class="auth-form">
+            <div id="signup-fields" style="display:none;">
+                <input type="text" id="first-name" placeholder="First Name" autocomplete="given-name">
+                <input type="text" id="last-name" placeholder="Last Name" autocomplete="family-name">
+                <input type="tel" id="phone" placeholder="Phone Number" autocomplete="tel">
+            </div>
+            <input type="email" id="auth-email" placeholder="Email" required autocomplete="email">
+            <input type="password" id="auth-password" placeholder="Password" required autocomplete="new-password">
+            <div class="error" id="auth-error"></div>
+            <button type="submit" id="auth-submit">Log In</button>
+            <div id="password-hint" style="font-size:0.95em;color:#888;display:none;text-align:left;margin-bottom:1rem;">
+                Password must be at least 8 characters, include uppercase, lowercase, number, and special character.
+            </div>
+        </form>
+        <a href="index.html" class="back-home">&larr; Back to Home</a>
+    </div>
+    <script>
+        const supabase = window.supabase.createClient(
+            'https://tlyjqvknvifpsecpptao.supabase.co',
+            'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRseWpxdmtudmlmcHNlY3BwdGFvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTMyNjA2NDIsImV4cCI6MjA2ODgzNjY0Mn0.gdx_k9LuSXeTaPmT8eNIv9g_DBNiImwk6z2plwJa1Hg'
+        );
+        let mode = 'login';
+        const authTitle = document.getElementById('auth-title');
+        const showLogin = document.getElementById('show-login');
+        const showSignup = document.getElementById('show-signup');
+        const authForm = document.getElementById('auth-form');
+        const authSubmit = document.getElementById('auth-submit');
+        const authError = document.getElementById('auth-error');
+        const signupFields = document.getElementById('signup-fields');
+        const passwordHint = document.getElementById('password-hint');
+
+        showLogin.onclick = () => {
+            mode = 'login';
+            showLogin.classList.add('active');
+            showSignup.classList.remove('active');
+            authTitle.textContent = 'Login';
+            authSubmit.textContent = 'Log In';
+            authError.textContent = '';
+            signupFields.style.display = 'none';
+            passwordHint.style.display = 'none';
+        };
+        showSignup.onclick = () => {
+            mode = 'signup';
+            showSignup.classList.add('active');
+            showLogin.classList.remove('active');
+            authTitle.textContent = 'Sign Up';
+            authSubmit.textContent = 'Sign Up';
+            authError.textContent = '';
+            signupFields.style.display = 'block';
+            passwordHint.style.display = 'block';
+        };
+
+        function validatePassword(password) {
+            // At least 8 chars, 1 uppercase, 1 lowercase, 1 number, 1 special char
+            return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]).{8,}$/.test(password);
+        }
+
+        authForm.onsubmit = async (e) => {
+            e.preventDefault();
+            authError.textContent = '';
+            const email = document.getElementById('auth-email').value.trim();
+            const password = document.getElementById('auth-password').value;
+            if (mode === 'signup') {
+                const firstName = document.getElementById('first-name').value.trim();
+                const lastName = document.getElementById('last-name').value.trim();
+                const phone = document.getElementById('phone').value.trim();
+                if (!firstName || !lastName || !phone) {
+                    authError.textContent = 'Please fill in all fields.';
+                    return;
+                }
+                if (!validatePassword(password)) {
+                    authError.textContent = 'Password does not meet security requirements.';
+                    return;
+                }
+            }
+            authSubmit.disabled = true;
+            authSubmit.textContent = (mode === 'login') ? 'Logging in...' : 'Signing up...';
+            let result;
+            if (mode === 'login') {
+                result = await supabase.auth.signInWithPassword({ email, password });
+                if (result.error) {
+                    authError.textContent = result.error.message;
+                } else {
+                    window.location.href = 'index.html';
+                }
+            } else {
+                const firstName = document.getElementById('first-name').value.trim();
+                const lastName = document.getElementById('last-name').value.trim();
+                const phone = document.getElementById('phone').value.trim();
+                result = await supabase.auth.signUp({
+                    email,
+                    password,
+                    options: {
+                        data: {
+                            first_name: firstName,
+                            last_name: lastName,
+                            phone: phone
+                        }
+                    }
+                });
+                if (result.error) {
+                    authError.textContent = result.error.message;
+                } else {
+                    alert('Sign up successful! Please check your email to confirm your account.');
+                    window.location.href = 'index.html';
+                }
+            }
+            authSubmit.disabled = false;
+            authSubmit.textContent = (mode === 'login') ? 'Log In' : 'Sign Up';
+        };
+    </script>
+</body>
+</html> 
