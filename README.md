@@ -112,7 +112,7 @@ Visit: [https://richlifehealthcare.in](https://richlifehealthcare.in)
 
 ## 📄 License
 
-© 2024 RICH LIFE HEALTH CARE. All rights reserved.
+© 2025 RICH LIFE HEALTH CARE. All rights reserved.
 
 ---
 
