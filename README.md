@@ -78,9 +78,8 @@ Visit: [https://richlifehealthcare.in](https://richlifehealthcare.in)
 
 ## 📞 Contact Information
 
-- **Phone**: +91 9136117311
-- **Email**: healthcarerichlife@gmail.com
-- **Address**: 03 Pinak CHS, Kelkar Road, Ramnagar, Near Kalyan Jewellers, Dombivli East, 421203
+<!-- Confidential information removed for public repository -->
+<!-- For business inquiries, please use the contact form on the website. -->
 
 ## 🌐 Social Links
 
