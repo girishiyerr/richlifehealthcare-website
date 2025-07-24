@@ -86,53 +86,167 @@ window.addEventListener('scroll', throttle(updateNavbar, 16)); // ~60fps
 
 // Form submission handling - O(1) time complexity
 const contactForm = document.querySelector('.contact-form form');
-if (contactForm) {
+if (contactForm && contactForm.id !== 'calendarBookingForm') {
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
-        
-        // Get form data efficiently
-        const formData = new FormData(this);
-        const name = this.querySelector('input[type="text"]').value.trim();
-        const email = this.querySelector('input[type="email"]').value.trim();
-        const phone = this.querySelector('input[type="tel"]').value.trim();
-        const package = this.querySelector('select').value;
-        const message = this.querySelector('textarea').value.trim();
-        
-        // Basic validation
-        if (!name || !email || !phone || !package) {
-            alert('Please fill in all required fields.');
-            return;
-        }
-        
-        // Email validation with optimized regex
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email)) {
-            alert('Please enter a valid email address.');
-            return;
-        }
-        
-        // Phone validation (basic)
-        const phoneRegex = /^[\+]?[0-9\s\-\(\)]{10,}$/;
-        if (!phoneRegex.test(phone)) {
-            alert('Please enter a valid phone number.');
-            return;
-        }
-        
-        // Simulate form submission
-        const submitBtn = this.querySelector('button[type="submit"]');
-        const originalText = submitBtn.textContent;
-        submitBtn.textContent = 'Sending...';
-        submitBtn.disabled = true;
-        
-        // Simulate API call
-        setTimeout(() => {
-            alert('Thank you for your inquiry! We will contact you soon to confirm your appointment.');
-            this.reset();
-            submitBtn.textContent = originalText;
-            submitBtn.disabled = false;
-        }, 2000);
+        // Remove or comment out the simulated API call and thank you alert to prevent duplicate popups
+        // setTimeout(() => {
+        //     alert('Thank you for your inquiry! We will contact you soon to confirm your appointment.');
+        //     this.reset();
+        //     submitBtn.textContent = originalText;
+        //     submitBtn.disabled = false;
+        // }, 2000);
     });
 }
+
+// --- Real-time validation for booking form with 'touched' state ---
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('calendarBookingForm');
+  if (!form) return;
+  const nameInput = document.getElementById('name');
+  const emailInput = document.getElementById('email');
+  const phoneInput = document.getElementById('phone');
+  const submitBtn = form.querySelector('button[type="submit"]');
+  const errorBox = document.getElementById('form-error');
+  const successBox = document.getElementById('form-success');
+
+  // Track if a field has been touched (focused and blurred)
+  const touched = { name: false, email: false, phone: false };
+
+  function validateName(name) {
+    return name.trim().length > 0;
+  }
+  function validateEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+  function validatePhone(phone) {
+    return /^[\+]?[0-9\s\-\(\)]{10,}$/.test(phone);
+  }
+
+  function updateValidation() {
+    let valid = true;
+    let msg = '';
+    if (touched.name && !validateName(nameInput.value)) {
+      valid = false;
+      msg = 'Please enter your name.';
+    } else if (touched.email && !validateEmail(emailInput.value)) {
+      valid = false;
+      msg = 'Please enter a valid email address.';
+    } else if (touched.phone && !validatePhone(phoneInput.value)) {
+      valid = false;
+      msg = 'Please enter a valid phone number.';
+    }
+    if (!valid) {
+      errorBox.textContent = msg;
+      errorBox.style.display = 'block';
+      submitBtn.disabled = true;
+    } else {
+      errorBox.textContent = '';
+      errorBox.style.display = 'none';
+      // Only enable if all fields are valid
+      if (validateName(nameInput.value) && validateEmail(emailInput.value) && validatePhone(phoneInput.value)) {
+        submitBtn.disabled = false;
+      } else {
+        submitBtn.disabled = true;
+      }
+    }
+  }
+
+  // Mark field as touched on blur
+  nameInput.addEventListener('blur', function() { touched.name = true; updateValidation(); });
+  emailInput.addEventListener('blur', function() { touched.email = true; updateValidation(); });
+  phoneInput.addEventListener('blur', function() { touched.phone = true; updateValidation(); });
+
+  // Validate on input, but only show error if touched
+  nameInput.addEventListener('input', updateValidation);
+  emailInput.addEventListener('input', updateValidation);
+  phoneInput.addEventListener('input', updateValidation);
+
+  // Initial state: no errors, button disabled until all valid
+  errorBox.textContent = '';
+  errorBox.style.display = 'none';
+  submitBtn.disabled = true;
+
+  // --- Booking form submit ---
+  form.addEventListener('submit', async function(ev) {
+    ev.preventDefault();
+    errorBox.style.display = 'none';
+    errorBox.textContent = '';
+    successBox.style.display = 'none';
+    successBox.textContent = '';
+    const name = nameInput.value.trim();
+    const phone = phoneInput.value.trim();
+    const email = emailInput.value.trim();
+    const packageVal = document.getElementById('package').value;
+    const date = document.getElementById('calendarDate') ? document.getElementById('calendarDate').value : '';
+    const slot = document.getElementById('slot') ? document.getElementById('slot').value : '';
+    const message = document.getElementById('message').value.trim();
+
+    // Final check for required fields (in case user bypassed real-time validation)
+    if (!name || !phone || !email || !packageVal || !date || !slot) {
+      errorBox.textContent = 'Please fill in all required fields and select a time slot.';
+      errorBox.style.display = 'block';
+      return;
+    }
+
+    // Save to Supabase
+    const { error } = await supabase.from('appointments').insert({
+      name, phone, email, package: packageVal, date, slot, message
+    });
+    if (!error) {
+      errorBox.style.display = 'none';
+      successBox.textContent = 'Your appointment has been booked! We will call you for confirmation.';
+      successBox.style.display = 'block';
+      form.reset();
+      // Reset touched state
+      touched.name = false; touched.email = false; touched.phone = false;
+      updateValidation();
+    } else {
+      // Log the full error object for debugging
+      console.error('Supabase booking error:', error, typeof error, JSON.stringify(error));
+      console.log('Error handler running', error);
+      function findDuplicateError(obj) {
+        if (!obj) return false;
+        if (typeof obj === 'object') {
+          if (obj.code === '23505') return true;
+          for (const key in obj) {
+            if (findDuplicateError(obj[key])) return true;
+          }
+        }
+        if (Array.isArray(obj)) {
+          for (const item of obj) {
+            if (findDuplicateError(item)) return true;
+          }
+        }
+        return false;
+      }
+      let msg = '';
+      if (findDuplicateError(error)) {
+        msg = 'You have already booked a slot for this day. Only one session is allowed per user per day.';
+      } else {
+        msg = 'There was an error booking your appointment.<br><br>';
+        msg += '<b>Full error object:</b><br><pre style="white-space:pre-wrap;word-break:break-all;">' + JSON.stringify(error, null, 2) + '</pre>';
+      }
+      errorBox.innerHTML = msg;
+      errorBox.style.display = 'block';
+      successBox.style.display = 'none';
+    }
+  });
+});
+
+// Make date input open calendar on any click
+document.addEventListener('DOMContentLoaded', function() {
+  const dateInput = document.getElementById('calendarDate');
+  if (dateInput) {
+    dateInput.addEventListener('click', function() {
+      if (typeof dateInput.showPicker === 'function') {
+        dateInput.showPicker();
+      } else {
+        dateInput.focus();
+      }
+    });
+  }
+});
 
 // Optimized intersection observer for animations - O(n) where n is number of elements
 const observerOptions = {

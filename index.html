@@ -9,7 +9,7 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Inter', sans-serif; line-height: 1.6; color: #333; }
         .navbar { position: fixed; top: 0; width: 100%; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); z-index: 1000; padding: 1rem 0; box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1); }
-        .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 30px; display: flex; justify-content: space-between; align-items: center; min-height: 80px; }
+        .nav-container { padding: 0 10px; display: flex; align-items: center; min-height: 80px; width: 100%; }
         .hero { padding: 120px 0 80px; background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.6) 100%), url('PHOTOS/51uAEUBdUVL.jpg'); background-size: cover; background-position: center; color: white; min-height: 100vh; display: flex; align-items: center; }
         .hero-content h1 { font-size: 4rem; font-weight: 700; margin-bottom: 1.5rem; line-height: 1.2; text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7); }
         .btn { padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; display: inline-block; }
@@ -29,11 +29,11 @@
             <div class="nav-logo">
                 <div class="logo-content">
                     <div class="logo-icon">
-                        <svg width="45" height="45" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M50,25 C50,15 40,10 30,10 C20,10 10,15 10,25 C10,35 30,50 50,40 C70,50 90,35 90,25 C90,15 80,10 70,10 C60,10 50,15 50,25 Z" 
-                                  fill="none" stroke="#008B8B" stroke-width="4"/>
-                            <path d="M35,45 L40,45 L42,40 L44,50 L46,45 L50,45 L52,40 L54,50 L55,45 L60,45 L62,40 L64,50 L65,45 L70,45" 
-                                  fill="none" stroke="#008B8B" stroke-width="3" stroke-linecap="round"/>
+                        <svg width="38" height="38" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Symmetrical heart shape -->
+                            <path d="M24 42c-7.5-6.5-14-11.5-14-18C10 16 16 14 24 22c8-8 14-6 14 2 0 6.5-6.5 11.5-14 18z" fill="#008B8B" stroke="#008B8B" stroke-width="2"/>
+                            <!-- Centered, proportionate heartbeat line -->
+                            <polyline points="12,28 18,28 21,22 24,32 27,18 30,28 36,28" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
                     <div class="logo-text">
@@ -43,12 +43,12 @@
                 </div>
             </div>
             <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="login.html" id="login-link">Login/Sign Up</a></li>
+                <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#about"><i class="fas fa-user-md"></i> About</a></li>
+                <li><a href="#services"><i class="fas fa-stethoscope"></i> Services</a></li>
+                <li><a href="#pricing"><i class="fas fa-rupee-sign"></i> Pricing</a></li>
+                <li><a href="#contact"><i class="fas fa-phone-alt"></i> Contact</a></li>
+                <li><a href="https://chat.whatsapp.com/EUnWYttig4tHoEErwFbPdK?mode=r_c" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> Join WhatsApp Group</a></li>
             </ul>
             <div class="hamburger">
                 <span></span>
@@ -419,7 +419,7 @@
                             <p>"After struggling with chronic fatigue for years, Dr. Kale's quantum analysis revealed the root cause. His natural approach completely transformed my health."</p>
                         </div>
                         <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Patient">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Priya Sharma">
                             <div>
                                 <h4>Priya Sharma</h4>
                                 <span>Age 35, Mumbai</span>
@@ -431,7 +431,7 @@
                             <p>"The quantum analyzer is incredible! It detected issues that regular blood tests missed. Dr. Kale's holistic approach is truly life-changing."</p>
                         </div>
                         <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Patient">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Rajesh Patel">
                             <div>
                                 <h4>Rajesh Patel</h4>
                                 <span>Age 42, Pune</span>
@@ -443,7 +443,7 @@
                             <p>"No more dependency on medicines! Dr. Kale's energy medicine approach and the quantum analysis helped me achieve natural wellness."</p>
                         </div>
                         <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Patient">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Meera Desai">
                             <div>
                                 <h4>Meera Desai</h4>
                                 <span>Age 28, Bangalore</span>
@@ -455,7 +455,7 @@
                             <p>"Amazing results! The quantum analysis showed exactly what my body needed. Dr. Kale's guidance helped me recover from chronic pain naturally."</p>
                         </div>
                         <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Patient">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Arun Kumar">
                             <div>
                                 <h4>Arun Kumar</h4>
                                 <span>Age 45, Delhi</span>
@@ -467,7 +467,7 @@
                             <p>"The 51-test analysis was comprehensive and accurate. Dr. Kale's treatment plan worked wonders for my digestive issues."</p>
                         </div>
                         <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Patient">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Sunita Reddy">
                             <div>
                                 <h4>Sunita Reddy</h4>
                                 <span>Age 38, Hyderabad</span>
@@ -479,7 +479,7 @@
                             <p>"Quantum medicine is the future! Dr. Kale's expertise and the advanced analyzer technology gave me insights no other doctor could provide."</p>
                         </div>
                         <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Patient">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Vikram Singh">
                             <div>
                                 <h4>Vikram Singh</h4>
                                 <span>Age 50, Chennai</span>
@@ -491,7 +491,7 @@
                             <p>"Finally found relief from my chronic migraines! The quantum analysis pinpointed the exact cause and Dr. Kale's natural remedies worked perfectly."</p>
                         </div>
                         <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Patient">
+                            <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Anjali Gupta">
                             <div>
                                 <h4>Anjali Gupta</h4>
                                 <span>Age 32, Kolkata</span>
@@ -503,7 +503,7 @@
                             <p>"The non-invasive approach is incredible. No needles, no pain, yet such detailed health insights. Dr. Kale is a true healer."</p>
                         </div>
                         <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Patient">
+                            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Rahul Verma">
                             <div>
                                 <h4>Rahul Verma</h4>
                                 <span>Age 29, Ahmedabad</span>
@@ -515,7 +515,7 @@
                             <p>"After 10 years of conventional treatment, Dr. Kale's quantum approach finally cured my autoimmune condition. I'm forever grateful!"</p>
                         </div>
                         <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1491349174775-aaafddd81942?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Patient">
+                            <img src="https://images.unsplash.com/photo-1491349174775-aaafddd81942?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Deepika Sharma">
                             <div>
                                 <h4>Deepika Sharma</h4>
                                 <span>Age 41, Jaipur</span>
@@ -527,7 +527,7 @@
                             <p>"The Japanese technology is amazing! Such precise analysis in just 10 minutes. Dr. Kale's recommendations changed my life completely."</p>
                         </div>
                         <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Patient">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Mohan Das">
                             <div>
                                 <h4>Mohan Das</h4>
                                 <span>Age 47, Lucknow</span>
@@ -539,7 +539,7 @@
                             <p>"I was amazed! Without saying a word, the doctor told me exactly what I was feeling inside."</p>
                         </div>
                         <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Patient">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Kavita Mehta">
                             <div>
                                 <h4>Kavita Mehta</h4>
                                 <span>Age 33, Surat</span>
@@ -551,7 +551,7 @@
                             <p>"This test is completely non-invasive — no needles, no pain, just hold the sensor and within minutes, I got a full-body health scan!"</p>
                         </div>
                         <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Patient">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Sanjay Kumar">
                             <div>
                                 <h4>Sanjay Kumar</h4>
                                 <span>Age 39, Indore</span>
@@ -563,7 +563,7 @@
                             <p>"I received a detailed report instantly – it covered so many parameters that even regular checkups miss."</p>
                         </div>
                         <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Patient">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Rekha Singh">
                             <div>
                                 <h4>Rekha Singh</h4>
                                 <span>Age 36, Bhopal</span>
@@ -575,7 +575,7 @@
                             <p>"The consultation was very clear and to the point. The doctor explained every part of the report with great patience."</p>
                         </div>
                         <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Patient">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Prakash Rao">
                             <div>
                                 <h4>Prakash Rao</h4>
                                 <span>Age 44, Nagpur</span>
@@ -587,7 +587,7 @@
                             <p>"So many pages of insights! I got to know about my liver, kidneys, vitamins, minerals, and even emotional stress."</p>
                         </div>
                         <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Patient">
+                            <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Neha Gupta">
                             <div>
                                 <h4>Neha Gupta</h4>
                                 <span>Age 31, Chandigarh</span>
@@ -599,7 +599,7 @@
                             <p>"Fast, accurate, and comprehensive — I didn't expect so much detail in such a short time."</p>
                         </div>
                         <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Patient">
+                            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Aditya Sharma">
                             <div>
                                 <h4>Aditya Sharma</h4>
                                 <span>Age 27, Vadodara</span>
@@ -611,7 +611,7 @@
                             <p>"It's like getting a snapshot of your whole body's health in 1 session."</p>
                         </div>
                         <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1491349174775-aaafddd81942?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Patient">
+                            <img src="https://images.unsplash.com/photo-1491349174775-aaafddd81942?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Maya Patel">
                             <div>
                                 <h4>Maya Patel</h4>
                                 <span>Age 29, Nashik</span>
@@ -623,7 +623,7 @@
                             <p>"Very helpful in preventive care — now I know what to focus on before any serious problem starts."</p>
                         </div>
                         <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Patient">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Rajiv Malhotra">
                             <div>
                                 <h4>Rajiv Malhotra</h4>
                                 <span>Age 52, Amritsar</span>
@@ -635,7 +635,7 @@
                             <p>"A smart and affordable way to stay ahead in health. I'll definitely recommend this to my family."</p>
                         </div>
                         <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Patient">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Lakshmi Devi">
                             <div>
                                 <h4>Lakshmi Devi</h4>
                                 <span>Age 48, Coimbatore</span>
@@ -647,248 +647,7 @@
                             <p>"I was shocked at how accurate the results were – even things I hadn't mentioned came up in the scan."</p>
                         </div>
                         <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Patient">
-                            <div>
-                                <h4>Vijay Reddy</h4>
-                                <span>Age 40, Visakhapatnam</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Duplicate testimonials for continuous scroll effect -->
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <p>"After struggling with chronic fatigue for years, Dr. Kale's quantum analysis revealed the root cause. His natural approach completely transformed my health."</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Patient">
-                            <div>
-                                <h4>Priya Sharma</h4>
-                                <span>Age 35, Mumbai</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <p>"The quantum analyzer is incredible! It detected issues that regular blood tests missed. Dr. Kale's holistic approach is truly life-changing."</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Patient">
-                            <div>
-                                <h4>Rajesh Patel</h4>
-                                <span>Age 42, Pune</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <p>"No more dependency on medicines! Dr. Kale's energy medicine approach and the quantum analysis helped me achieve natural wellness."</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Patient">
-                            <div>
-                                <h4>Meera Desai</h4>
-                                <span>Age 28, Bangalore</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <p>"Amazing results! The quantum analysis showed exactly what my body needed. Dr. Kale's guidance helped me recover from chronic pain naturally."</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Patient">
-                            <div>
-                                <h4>Arun Kumar</h4>
-                                <span>Age 45, Delhi</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <p>"The 51-test analysis was comprehensive and accurate. Dr. Kale's treatment plan worked wonders for my digestive issues."</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Patient">
-                            <div>
-                                <h4>Sunita Reddy</h4>
-                                <span>Age 38, Hyderabad</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <p>"Quantum medicine is the future! Dr. Kale's expertise and the advanced analyzer technology gave me insights no other doctor could provide."</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Patient">
-                            <div>
-                                <h4>Vikram Singh</h4>
-                                <span>Age 50, Chennai</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <p>"Finally found relief from my chronic migraines! The quantum analysis pinpointed the exact cause and Dr. Kale's natural remedies worked perfectly."</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Patient">
-                            <div>
-                                <h4>Anjali Gupta</h4>
-                                <span>Age 32, Kolkata</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <p>"The non-invasive approach is incredible. No needles, no pain, yet such detailed health insights. Dr. Kale is a true healer."</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Patient">
-                            <div>
-                                <h4>Rahul Verma</h4>
-                                <span>Age 29, Ahmedabad</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <p>"After 10 years of conventional treatment, Dr. Kale's quantum approach finally cured my autoimmune condition. I'm forever grateful!"</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1491349174775-aaafddd81942?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Patient">
-                            <div>
-                                <h4>Deepika Sharma</h4>
-                                <span>Age 41, Jaipur</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <p>"The Japanese technology is amazing! Such precise analysis in just 10 minutes. Dr. Kale's recommendations changed my life completely."</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Patient">
-                            <div>
-                                <h4>Mohan Das</h4>
-                                <span>Age 47, Lucknow</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <p>"I was amazed! Without saying a word, the doctor told me exactly what I was feeling inside."</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Patient">
-                            <div>
-                                <h4>Kavita Mehta</h4>
-                                <span>Age 33, Surat</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <p>"This test is completely non-invasive — no needles, no pain, just hold the sensor and within minutes, I got a full-body health scan!"</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Patient">
-                            <div>
-                                <h4>Sanjay Kumar</h4>
-                                <span>Age 39, Indore</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <p>"I received a detailed report instantly – it covered so many parameters that even regular checkups miss."</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Patient">
-                            <div>
-                                <h4>Rekha Singh</h4>
-                                <span>Age 36, Bhopal</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <p>"The consultation was very clear and to the point. The doctor explained every part of the report with great patience."</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Patient">
-                            <div>
-                                <h4>Prakash Rao</h4>
-                                <span>Age 44, Nagpur</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <p>"So many pages of insights! I got to know about my liver, kidneys, vitamins, minerals, and even emotional stress."</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Patient">
-                            <div>
-                                <h4>Neha Gupta</h4>
-                                <span>Age 31, Chandigarh</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <p>"Fast, accurate, and comprehensive — I didn't expect so much detail in such a short time."</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Patient">
-                            <div>
-                                <h4>Aditya Sharma</h4>
-                                <span>Age 27, Vadodara</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <p>"It's like getting a snapshot of your whole body's health in 1 session."</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1491349174775-aaafddd81942?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Patient">
-                            <div>
-                                <h4>Maya Patel</h4>
-                                <span>Age 29, Nashik</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <p>"Very helpful in preventive care — now I know what to focus on before any serious problem starts."</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Patient">
-                            <div>
-                                <h4>Rajiv Malhotra</h4>
-                                <span>Age 52, Amritsar</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <p>"A smart and affordable way to stay ahead in health. I'll definitely recommend this to my family."</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Patient">
-                            <div>
-                                <h4>Lakshmi Devi</h4>
-                                <span>Age 48, Coimbatore</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <p>"I was shocked at how accurate the results were – even things I hadn't mentioned came up in the scan."</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Patient">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Vijay Reddy">
                             <div>
                                 <h4>Vijay Reddy</h4>
                                 <span>Age 40, Visakhapatnam</span>
@@ -919,7 +678,7 @@
                         <li><i class="fas fa-check"></i> Detailed Consultation</li>
                         <li><i class="fas fa-check"></i> General Health Tips</li>
                     </ul>
-                    <a href="#contact" class="btn btn-primary">Book Now</a>
+                    <button class="btn btn-primary select-package-btn" data-package="basic">Book Now</button>
                 </div>
                 <div class="pricing-card">
                     <div class="pricing-header">
@@ -937,7 +696,7 @@
                         <li><i class="fas fa-check"></i> Advanced Health Tips</li>
                         <li><i class="fas fa-check"></i> Lifestyle Coaching</li>
                     </ul>
-                    <a href="#contact" class="btn btn-primary">Book Now</a>
+                    <button class="btn btn-primary select-package-btn" data-package="comprehensive">Book Now</button>
                 </div>
                 <div class="pricing-card featured">
                     <div class="pricing-badge">Most Popular</div>
@@ -958,7 +717,7 @@
                         <li><i class="fas fa-check"></i> Priority Appointment Booking</li>
                         <li><i class="fas fa-check"></i> Diet & Nutrition Guide</li>
                     </ul>
-                    <a href="#contact" class="btn btn-primary">Book Now</a>
+                    <button class="btn btn-primary select-package-btn" data-package="premium">Book Now</button>
                 </div>
             </div>
         </div>
@@ -969,9 +728,42 @@
         <div class="container">
             <div class="contact-content">
                 <div class="contact-info">
-                    <h2>Book Your Quantum Health Analysis</h2>
-                    <p>Take the first step towards natural wellness. Book your appointment today and discover your body's true health status.</p>
-                    <div class="contact-details">
+                    <h2>Book Your Appointment</h2>
+                    <div class="contact-form">
+                        <form id="calendarBookingForm">
+                            <div id="form-error" style="display:none;background:#ffeaea;color:#c0392b;padding:0.8rem 1.2rem;margin-bottom:1rem;border-radius:8px;font-weight:600;"></div>
+                            <input type="hidden" id="selectedDate" name="selectedDate">
+                            <input type="hidden" id="selectedSlot" name="selectedSlot">
+                            <div class="form-group">
+                                <input type="text" placeholder="Your Name" id="name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" placeholder="Your Email" id="email" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" placeholder="Your Phone" id="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <select id="package" name="package" required>
+                                    <option value="">Choose a package</option>
+                                    <option value="basic">Basic</option>
+                                    <option value="comprehensive">Comprehensive</option>
+                                    <option value="premium">Premium</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <textarea placeholder="Any specific health concerns?" rows="4" id="message"></textarea>
+                            </div>
+                            <div id="calendar-container"></div>
+                            <div id="slots-container" style="margin-top: 2rem; margin-bottom: 2rem;"></div>
+                            <div id="slot-summary" style="display:none;font-size:1.1rem;background:#e6f7fa;color:#008B8B;margin-bottom:1.5rem;padding:0.7rem 1.2rem;border-radius:8px;"></div>
+                            <button type="submit" class="btn btn-primary">Book Appointment</button>
+                            <div id="form-success" style="display:none;color:#27ae60;margin-top:1rem;font-weight:600;"></div>
+                        </form>
+                    </div>
+                </div>
+                <div style="padding-top: 8rem; display: flex; flex-direction: column; align-items: center; width: 100%;">
+                    <div class="contact-details" style="margin-bottom:2.5rem; width:100%; max-width:520px;">
                         <div class="contact-item">
                             <i class="fas fa-phone"></i>
                             <div>
@@ -994,31 +786,11 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="contact-form">
-                    <form>
-                        <div class="form-group">
-                            <input type="text" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" placeholder="Your Phone" required>
-                        </div>
-                        <div class="form-group">
-                            <select required>
-                                <option value="">Select Package</option>
-                                <option value="basic">Basic Health Check - ₹199</option>
-                                <option value="comprehensive">Comprehensive Analysis - ₹499</option>
-                                <option value="premium">Premium Wellness - ₹999</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <textarea placeholder="Any specific health concerns?" rows="4"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Book Appointment</button>
-                    </form>
+                    <div class="contact-map" style="margin-top: 1.5rem; width:100%; max-width:520px;">
+                        <iframe
+                            src="https://www.google.com/maps?q=03+Pinak+CHS,+Kelkar+Road,+Ramnagar,+Near+Kalyan+Jewellers,+Dombivli+East,+421203&output=embed"
+                            width="100%" height="300" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1053,10 +825,10 @@
                 <div class="footer-section">
                     <h4>Connect With Us</h4>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-whatsapp"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61578326975968" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/healthcarerichlife/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                        <a href="https://chat.whatsapp.com/EUnWYttig4tHoEErwFbPdK?mode=r_c" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.youtube.com/@RichLifeByDrKale" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
             </div>
@@ -1068,6 +840,184 @@
 
     <script src="performance.js"></script>
     <script src="script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.39.7/dist/umd/supabase.min.js"></script>
+    <script>
+// Supabase config
+const SUPABASE_URL = 'https://tlyjqvknvifpsecpptao.supabase.co';
+const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRseWpxdmtudmlmcHNlY3BwdGFvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTMyNjA2NDIsImV4cCI6MjA2ODgzNjY0Mn0.gdx_k9LuSXeTaPmT8eNIv9g_DBNiImwk6z2plwJa1Hg';
+const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+const slots = [
+  '09:00 AM', '09:30 AM', '10:00 AM', '10:30 AM', '11:00 AM', '11:30 AM', '12:00 PM', '12:30 PM',
+  '05:00 PM', '05:30 PM', '06:00 PM', '06:30 PM', '07:00 PM', '07:30 PM', '08:00 PM', '08:30 PM'
+];
+
+function getToday() {
+  const today = new Date();
+  const yyyy = today.getFullYear();
+  const mm = String(today.getMonth() + 1).padStart(2, '0');
+  const dd = String(today.getDate()).padStart(2, '0');
+  return `${yyyy}-${mm}-${dd}`;
+}
+
+function renderCalendar() {
+  const container = document.getElementById('calendar-container');
+  let html = '<input type="date" id="calendarDate" min="' + getToday() + '" style="font-size:1.2rem;padding:0.5rem 1rem;">';
+  container.innerHTML = html;
+}
+
+async function fetchBookedSlots(date) {
+  const { data, error } = await supabase
+    .from('appointments')
+    .select('slot')
+    .eq('date', date);
+  if (error) return [];
+  return data.map(row => row.slot);
+}
+
+async function renderSlots(date) {
+  const container = document.getElementById('slots-container');
+  if (!date) { container.innerHTML = ''; return; }
+  const booked = await fetchBookedSlots(date);
+  let html = '<div style="display:flex;flex-wrap:wrap;gap:1rem;">';
+  slots.forEach(slot => {
+    const isBooked = booked.includes(slot);
+    html += `<button type="button" class="slot-btn" data-slot="${slot}" ${isBooked ? 'disabled' : ''} style="padding:0.7rem 1.5rem;font-size:1.1rem;border-radius:8px;border:none;${isBooked ? 'background:#e74c3c;color:#fff;cursor:not-allowed;' : 'background:#f0f0f0;color:#222;cursor:pointer;'}">${slot}</button>`;
+  });
+  html += '</div>';
+  container.innerHTML = html;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  renderCalendar();
+  const calendar = document.getElementById('calendar-container');
+  const slotsContainer = document.getElementById('slots-container');
+  const form = document.getElementById('calendarBookingForm');
+  const selectedDateInput = document.getElementById('selectedDate');
+  const selectedSlotInput = document.getElementById('selectedSlot');
+
+  calendar.addEventListener('change', async e => {
+    if (e.target.id === 'calendarDate') {
+      await renderSlots(e.target.value);
+      form.style.display = 'block';
+      updateSlotSummary('', '');
+      if (selectedDateInput) selectedDateInput.value = '';
+      if (selectedSlotInput) selectedSlotInput.value = '';
+    }
+  });
+
+  // Add event listeners for package selection buttons
+  function scrollToBooking() {
+    const bookingSection = document.getElementById('booking');
+    if (bookingSection) bookingSection.scrollIntoView({ behavior: 'smooth' });
+  }
+  document.querySelectorAll('.select-package-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const pkg = this.getAttribute('data-package');
+      const select = document.getElementById('package');
+      if (select) {
+        select.value = pkg;
+        select.dispatchEvent(new Event('change'));
+      }
+      scrollToBooking();
+    });
+  });
+
+  // Ensure slot buttons are clickable and highlight selected
+  slotsContainer.addEventListener('click', e => {
+    if (e.target.classList.contains('slot-btn') && !e.target.disabled) {
+      form.style.display = 'block';
+      const dateVal = document.getElementById('calendarDate').value;
+      const slotVal = e.target.dataset.slot;
+      if (selectedDateInput) selectedDateInput.value = dateVal;
+      if (selectedSlotInput) selectedSlotInput.value = slotVal;
+      document.querySelectorAll('.slot-btn').forEach(btn => {
+        btn.style.outline = 'none';
+        btn.style.background = btn.disabled ? '#e74c3c' : '#f0f0f0';
+        btn.style.color = btn.disabled ? '#fff' : '#222';
+        btn.style.border = 'none';
+      });
+      e.target.style.outline = '3px solid #3498db';
+      e.target.style.background = '#3498db';
+      e.target.style.color = '#fff';
+      e.target.style.border = '2px solid #1E3A8A';
+      updateSlotSummary(dateVal, slotVal);
+      // Debug log for slot selection
+      console.log('Slot selected:', { date: dateVal, slot: slotVal });
+    }
+  });
+
+  // Booking form submit
+  form.addEventListener('submit', async function(ev) {
+    ev.preventDefault();
+    const errorBox = document.getElementById('form-error');
+    const successBox = document.getElementById('form-success');
+    errorBox.style.display = 'none';
+    successBox.style.display = 'none';
+    errorBox.textContent = '';
+    successBox.textContent = '';
+
+    const name = document.getElementById('name').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const packageVal = document.getElementById('package').value;
+    const date = selectedDateInput ? selectedDateInput.value : '';
+    const slot = selectedSlotInput ? selectedSlotInput.value : '';
+    const message = document.getElementById('message').value.trim();
+
+    // Validate required fields
+    if (!name || !phone || !email || !packageVal || !date || !slot) {
+      errorBox.textContent = 'Please fill in all required fields and select a time slot.';
+      errorBox.style.display = 'block';
+      return;
+    }
+    // Validate email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      errorBox.textContent = 'Please enter a valid email address.';
+      errorBox.style.display = 'block';
+      return;
+    }
+    // Validate phone
+    const phoneRegex = /^[\+]?[0-9\s\-\(\)]{10,}$/;
+    if (!phoneRegex.test(phone)) {
+      errorBox.textContent = 'Please enter a valid phone number.';
+      errorBox.style.display = 'block';
+      return;
+    }
+
+    // Save to Supabase
+    const { error } = await supabase.from('appointments').insert({
+      name, phone, email, package: packageVal, date, slot, message
+    });
+    if (!error) {
+      errorBox.style.display = 'none';
+      successBox.textContent = 'Your appointment has been successfully booked! We will contact you soon to confirm.';
+      successBox.style.display = 'block';
+      await renderSlots(date); // Refresh slots
+      form.reset();
+      updateSlotSummary('', '');
+      if (selectedDateInput) selectedDateInput.value = '';
+      if (selectedSlotInput) selectedSlotInput.value = '';
+    } else {
+      errorBox.textContent = 'Error booking appointment. Please try again.';
+      errorBox.style.display = 'block';
+      console.error(error);
+    }
+  });
+});
+// Update slot summary after slot selection
+function updateSlotSummary(date, slot) {
+  const summary = document.getElementById('slot-summary');
+  if (date && slot) {
+    summary.textContent = `You have selected: ${date} at ${slot}`;
+    summary.style.display = 'block';
+  } else {
+    summary.textContent = '';
+    summary.style.display = 'none';
+  }
+}
+</script>
 
 </body>
 </html> 
