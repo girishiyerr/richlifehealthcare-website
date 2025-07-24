@@ -9,10 +9,13 @@ A comprehensive website for RICH LIFE HEALTH CARE, featuring advanced quantum ma
 - **Comprehensive Health Assessment**: Covers all major body systems
 - **Expert Consultation**: Dr. Dhananjay Kale's 25+ years of experience
 - **Modern Responsive Design**: Works perfectly on all devices
+- **Online Booking**: Book your appointment directly from the website
+- **Contact & Location**: Easy-to-use contact section with map and details
+- **Social Media Integration**: Footer links to Facebook, Instagram, WhatsApp, and YouTube
 
 ## 🚀 Live Website
 
-Visit: [richlifehealthcare.in](https://richlifehealthcare.in)
+Visit: [https://richlifehealthcare.in](https://richlifehealthcare.in)
 
 ## 📁 Project Structure
 
@@ -75,13 +78,38 @@ Visit: [richlifehealthcare.in](https://richlifehealthcare.in)
 
 ## 📞 Contact Information
 
-- **Phone**: +91 98765 43210
-- **Email**: info@richlifehealthcare.com
-- **Address**: 123 Wellness Street, Mumbai, Maharashtra
+- **Phone**: +91 9136117311
+- **Email**: healthcarerichlife@gmail.com
+- **Address**: 03 Pinak CHS, Kelkar Road, Ramnagar, Near Kalyan Jewellers, Dombivli East, 421203
 
-## 🌐 Deployment
+## 🌐 Social Links
 
-This website is deployed on Netlify and connected to the custom domain `richlifehealthcare.in`.
+- **Facebook**: [facebook.com/profile.php?id=61578326975968](https://www.facebook.com/profile.php?id=61578326975968)
+- **Instagram**: [instagram.com/healthcarerichlife](https://www.instagram.com/healthcarerichlife/)
+- **WhatsApp Group**: [chat.whatsapp.com/EUnWYttig4tHoEErwFbPdK?mode=r_c](https://chat.whatsapp.com/EUnWYttig4tHoEErwFbPdK?mode=r_c)
+- **YouTube**: [youtube.com/@RichLifeByDrKale](https://www.youtube.com/@RichLifeByDrKale)
+
+## 🖥️ Deployment (Netlify + Custom Domain)
+
+1. **Deploy to Netlify**
+   - Go to [netlify.com](https://netlify.com) and sign up/log in.
+   - Click "Add new site" > "Deploy manually" and drag & drop your project folder, or connect your GitHub repo.
+2. **Set Custom Domain**
+   - In Netlify dashboard, go to Domain settings > Add custom domain.
+   - Enter `richlifehealthcare.in` and follow the prompts.
+3. **Update GoDaddy DNS**
+   - Set A record: `@` → `75.2.60.5`
+   - Set CNAME: `www` → your Netlify subdomain (e.g., `your-site-name.netlify.app`)
+   - Wait for DNS propagation and Netlify SSL.
+4. **Done!**
+   - Your site is live at [https://richlifehealthcare.in](https://richlifehealthcare.in)
+
+## 🆕 Latest Improvements
+
+- **Footer**: Equal-width columns, real social links, and modern layout
+- **Contact Section**: Side-by-side booking form and contact details/map
+- **UI/UX**: Consistent spacing, alignment, and mobile responsiveness
+- **No Login/Signup**: Navigation cleaned up for a focused user experience
 
 ## 📄 License
 
