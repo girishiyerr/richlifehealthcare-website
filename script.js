@@ -245,6 +245,24 @@ document.addEventListener('DOMContentLoaded', function() {
         dateInput.focus();
       }
     });
+    
+    // Add placeholder functionality for date input
+    dateInput.addEventListener('focus', function() {
+      if (!this.value) {
+        this.style.color = '#333';
+      }
+    });
+    
+    dateInput.addEventListener('blur', function() {
+      if (!this.value) {
+        this.style.color = '#999';
+      }
+    });
+    
+    // Set initial placeholder state
+    if (!dateInput.value) {
+      dateInput.style.color = '#999';
+    }
   }
 });
 
