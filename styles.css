@@ -1479,3 +1479,314 @@ body {
     border-color: #e1b800 !important;
     transition: background 0.5s, border-color 0.5s;
 } 
+
+/* Admin Login Page Styles */
+.admin-login-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 2rem;
+}
+
+.admin-login-form-wrapper {
+    background: white;
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.admin-login-form-wrapper .nav-logo {
+    margin-bottom: 2rem;
+    justify-content: center;
+}
+
+.admin-login-form-wrapper h2 {
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+#admin-login-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+    font-weight: 600;
+    text-align: left;
+}
+
+#admin-login-form input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e1e8ed;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+}
+
+#admin-login-form input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+#admin-login-form button {
+    width: 100%;
+    padding: 12px 24px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 1rem;
+}
+
+#admin-login-form button:hover {
+    background: #2980b9;
+}
+
+#admin-login-error {
+    color: #e74c3c;
+    background: #fdf2f2;
+    padding: 12px;
+    border-radius: 6px;
+    margin-top: 1rem;
+    display: none;
+}
+
+.back-home-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #6c757d;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.back-home-btn:hover {
+    background: #5a6268;
+    color: white;
+    text-decoration: none;
+}
+
+/* Admin Dashboard Page Styles */
+.admin-dashboard-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #e1e8ed;
+}
+
+.admin-dashboard-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.logout-btn {
+    background: #d32f2f !important;
+}
+
+.logout-btn:hover {
+    background: #b71c1c !important;
+}
+
+.admin-dashboard-container {
+    min-height: calc(100vh - 80px);
+    background: #f8f9fa;
+    padding: 2rem;
+}
+
+.admin-dashboard-container h2 {
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+#admin-dashboard-loading {
+    text-align: center;
+    padding: 2rem;
+    color: #6c757d;
+    font-size: 1.1rem;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.nav-logo .logo-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-logo .logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-logo .logo-main {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #1F3A8A;
+}
+
+.nav-logo .logo-sub {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #6B6B6B;
+}
+
+@media (max-width: 600px) {
+    .admin-dashboard-container {
+        padding: 1rem;
+    }
+    .admin-dashboard-header {
+        padding: 1rem;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .admin-dashboard-actions {
+        width: 100%;
+        justify-content: center;
+    }
+    .nav-logo .logo-main {
+        font-size: 1.5rem;
+    }
+    .nav-logo .logo-sub {
+        font-size: 0.8rem;
+    }
+    .admin-login-form-wrapper {
+        padding: 2rem;
+        margin: 1rem;
+    }
+}
+
+#admin-dashboard-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#admin-dashboard-table th, #admin-dashboard-table td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #e1e8ed;
+}
+
+#admin-dashboard-table th {
+    background: #f8f9fa;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.admin-dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.message-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+}
+
+.message-container .toggle-msg-btn {
+    margin-top: 4px;
+    align-self: flex-start;
+}
+
+.toggle-msg-btn {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+.toggle-msg-btn:hover, .toggle-msg-btn:focus {
+    background: #2980b9;
+}
+
+#admin-dashboard-table .msg-short, #admin-dashboard-table .msg-full {
+    max-width: 200px;
+    word-wrap: break-word;
+}
+
+@media (max-width: 900px) {
+    .admin-dashboard-container {
+        padding: 1rem;
+    }
+    #admin-dashboard-table th, #admin-dashboard-table td {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+}
+
+#admin-dashboard-table table {
+    font-size: 14px;
+}
+
+#admin-dashboard-table td, #admin-dashboard-table th {
+    padding: 10px 12px;
+    vertical-align: top;
+}
+
+#admin-dashboard-table td:last-child, #admin-dashboard-table th:last-child {
+    text-align: center;
+}
+
+.dashboard-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    margin: 10px 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.dashboard-btn:hover, .dashboard-btn:focus {
+    background: #2980b9;
+    text-decoration: none;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .dashboard-btn {
+        display: block;
+        margin: 5px 0;
+        text-align: center;
+    }
+} 
