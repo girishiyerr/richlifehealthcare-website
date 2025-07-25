@@ -1233,6 +1233,31 @@ body {
     color: #bdc3c7;
 }
 
+/* Date input wrapper and placeholder styling */
+.date-input-wrapper {
+    position: relative !important;
+    width: 100% !important;
+}
+
+.date-placeholder {
+    position: absolute !important;
+    top: 50% !important;
+    left: 16px !important;
+    transform: translateY(-50%) !important;
+    color: #999 !important;
+    font-size: 16px !important;
+    pointer-events: none !important;
+    transition: all 0.3s ease !important;
+    z-index: 1 !important;
+    font-style: italic !important;
+}
+
+.date-input:focus + .date-placeholder,
+.date-input:not([value=""]) + .date-placeholder {
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
 /* Date input styling for better mobile appearance */
 input[type="date"], .date-input {
     background: white !important;
@@ -1308,6 +1333,11 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover, .date-input::-webki
         font-size: 18px !important; /* Larger font for mobile */
         padding: 16px 20px !important; /* More padding for touch */
         min-height: 50px !important; /* Minimum height for touch targets */
+    }
+    
+    .date-placeholder {
+        font-size: 18px !important; /* Larger placeholder text on mobile */
+        left: 20px !important; /* Adjust position for larger padding */
     }
     
     /* Better placeholder visibility on mobile */
