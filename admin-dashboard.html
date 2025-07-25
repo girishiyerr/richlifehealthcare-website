@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - Appointments</title>
+  <link rel="stylesheet" href="styles.css?v=3.0">
+</head>
+<body>
+  <div class="admin-dashboard-header">
+    <div class="nav-logo">
+      <div class="logo-content">
+        <div class="logo-icon">
+          <svg width="38" height="38" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 42c-7.5-6.5-14-11.5-14-18C10 16 16 14 24 22c8-8 14-6 14 2 0 6.5-6.5 11.5-14 18z" fill="#008B8B" stroke="#008B8B" stroke-width="2"/>
+            <polyline points="12,28 18,28 21,22 24,32 27,18 30,28 36,28" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <div class="logo-main">RICH LIFE</div>
+          <div class="logo-sub">HEALTH CARE</div>
+        </div>
+      </div>
+    </div>
+    <div class="admin-dashboard-actions">
+      <a href="admin.html" class="dashboard-btn logout-btn">Logout</a>
+      <a href="index.html" class="dashboard-btn">Visit Homepage</a>
+    </div>
+  </div>
+  <main class="admin-dashboard-container">
+    <h2>Appointments Dashboard</h2>
+    <div id="admin-dashboard-loading">Loading appointments...</div>
+    <div id="admin-dashboard-table"></div>
+  </main>
+  <!-- Supabase JS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script>
+    const supabaseUrl = 'https://tlyjqvknvifpsecpptao.supabase.co';
+    const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRseWpxdmtudmlmcHNlY3BwdGFvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTMyNjA2NDIsImV4cCI6MjA2ODgzNjY0Mn0.gdx_k9LuSXeTaPmT8eNIv9g_DBNiImwk6z2plwJa1Hg';
+    window.supabase = supabase.createClient(supabaseUrl, supabaseKey);
+  </script>
+  <script src="admin-dashboard.js"></script>
+</body>
+</html> 
