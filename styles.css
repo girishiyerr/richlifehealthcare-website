@@ -1473,3 +1473,9 @@ body {
         padding: 0;
     }
 } 
+
+#package.highlight-package {
+    background: #fff8c6 !important;
+    border-color: #e1b800 !important;
+    transition: background 0.5s, border-color 0.5s;
+} 

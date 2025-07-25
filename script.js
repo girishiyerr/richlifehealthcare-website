@@ -446,3 +446,28 @@ if ('serviceWorker' in navigator) {
             });
     });
 } 
+
+// --- Pricing package button: select package and scroll to booking ---
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.select-package-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      // 1. Set the package dropdown value
+      const pkg = btn.getAttribute('data-package');
+      const packageDropdown = document.getElementById('package');
+      if (packageDropdown) {
+        packageDropdown.value = pkg;
+        // 2. Briefly highlight the dropdown
+        packageDropdown.classList.add('highlight-package');
+        setTimeout(() => packageDropdown.classList.remove('highlight-package'), 1200);
+      }
+      // 3. Scroll to the Book Your Appointment section
+      const contactSection = document.getElementById('contact');
+      if (contactSection) {
+        const navbar = document.querySelector('.navbar');
+        const navbarHeight = navbar ? navbar.offsetHeight : 0;
+        const targetPosition = contactSection.offsetTop - navbarHeight;
+        window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+      }
+    });
+  });
+}); 
